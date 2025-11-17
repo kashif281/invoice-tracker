@@ -8,22 +8,30 @@
         {
           "name": "invoice_number",
           "type": "varchar",
-          "nullable": false
+          "nullable": false,
+          "isIndex": false,
+          "isUnique": false
         },
         {
           "name": "issue_date",
           "type": "date",
-          "nullable": false
+          "nullable": false,
+          "isIndex": false,
+          "isUnique": false
         },
         {
           "name": "due_date",
           "type": "date",
-          "nullable": false
+          "nullable": false,
+          "isIndex": false,
+          "isUnique": false
         },
         {
           "name": "amount",
-          "type": "numeric",
-          "nullable": false
+          "type": "integer",
+          "nullable": false,
+          "isIndex": false,
+          "isUnique": false
         },
         {
           "name": "status",
@@ -33,7 +41,9 @@
             "draft",
             "sent",
             "paid"
-          ]
+          ],
+          "isIndex": false,
+          "isUnique": false
         }
       ],
       "indexes": [],
@@ -47,12 +57,16 @@
         {
           "name": "payment_date",
           "type": "date",
-          "nullable": false
+          "nullable": false,
+          "isIndex": false,
+          "isUnique": false
         },
         {
           "name": "amount",
-          "type": "numeric",
-          "nullable": false
+          "type": "integer",
+          "nullable": false,
+          "isIndex": false,
+          "isUnique": false
         },
         {
           "name": "status",
@@ -61,7 +75,9 @@
           "values": [
             "pending",
             "completed"
-          ]
+          ],
+          "isIndex": false,
+          "isUnique": false
         }
       ],
       "indexes": [],

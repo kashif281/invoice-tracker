@@ -36,7 +36,7 @@ export class Payment {
   @Column({ type: 'date', nullable: false })
   payment_date: string;
 
-  @Column({ type: 'numeric', precision: 10, scale: 2 })
+  @Column({ type: 'int' })
   amount: number;
 
   @IsOptional({ groups: [UPDATE] })

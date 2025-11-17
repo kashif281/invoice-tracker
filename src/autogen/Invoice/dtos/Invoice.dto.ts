@@ -11,7 +11,7 @@ export class InvoiceCreate {
   @ApiProperty()
   due_date: string;
   @ApiProperty()
-  amount: string;
+  amount: number;
   @ApiProperty()
   status: string;
 }
@@ -26,7 +26,7 @@ export class Invoice {
   @ApiProperty()
   due_date: string;
   @ApiProperty()
-  amount: string;
+  amount: number;
   @ApiProperty()
   status: string;
 }

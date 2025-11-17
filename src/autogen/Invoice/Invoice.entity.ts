@@ -44,7 +44,7 @@ export class Invoice {
   @Column({ type: 'date', nullable: false })
   due_date: string;
 
-  @Column({ type: 'numeric', precision: 10, scale: 2 })
+  @Column({ type: 'int' })
   amount: number;
 
   @IsOptional({ groups: [UPDATE] })
