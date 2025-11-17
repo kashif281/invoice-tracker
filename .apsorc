@@ -1,0 +1,79 @@
+{
+  "entities": [
+    {
+      "name": "Invoice",
+      "created_at": false,
+      "updated_at": false,
+      "fields": [
+        {
+          "name": "invoice_number",
+          "type": "varchar",
+          "nullable": false
+        },
+        {
+          "name": "issue_date",
+          "type": "date",
+          "nullable": false
+        },
+        {
+          "name": "due_date",
+          "type": "date",
+          "nullable": false
+        },
+        {
+          "name": "amount",
+          "type": "numeric",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "varchar",
+          "nullable": false,
+          "values": [
+            "draft",
+            "sent",
+            "paid"
+          ]
+        }
+      ],
+      "indexes": [],
+      "uniques": []
+    },
+    {
+      "name": "Payment",
+      "created_at": false,
+      "updated_at": false,
+      "fields": [
+        {
+          "name": "payment_date",
+          "type": "date",
+          "nullable": false
+        },
+        {
+          "name": "amount",
+          "type": "numeric",
+          "nullable": false
+        },
+        {
+          "name": "status",
+          "type": "varchar",
+          "nullable": false,
+          "values": [
+            "pending",
+            "completed"
+          ]
+        }
+      ],
+      "indexes": [],
+      "uniques": []
+    }
+  ],
+  "relationships": [
+    {
+      "from": "Invoice",
+      "to": "Payment",
+      "type": "OneToOne"
+    }
+  ],
+  "_removedEntities": []
+}
